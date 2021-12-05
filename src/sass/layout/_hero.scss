@@ -1,0 +1,313 @@
+.hero {
+	position: relative;
+
+	padding-top: 193px;
+	padding-bottom: 160px;
+
+	margin-right: auto;
+	margin-left: auto;
+
+	background-color: var(--heroBgc);
+	z-index: -3;
+
+	max-width: 480px;
+	height: 502px;
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		max-width: 768px;
+		height: 399px;
+
+		padding-top: 96px;
+		padding-bottom: 34px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		max-width: 1800px;
+		height: 665px;
+
+		padding-top: 171px;
+		padding-bottom: 56px;
+	}
+}
+
+.hero-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hero-left {
+	margin-bottom: 66px;
+
+	@media screen and (min-width: 1080px) {
+		margin-bottom: 112px;
+	}
+}
+
+.hero__tittle {
+	font-family: Titan One, sans-serif;
+	font-style: normal;
+	@include font(400, 26px, 1.15);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--secondaryColor);
+
+	width: 218px;
+	margin-bottom: 19px;
+
+	@media screen and (min-width: 768px) {
+		@include font(400, 22px, 1.14);
+		width: 162px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		@include font(400, 38px, 1.16);
+		width: 277px;
+		margin-bottom: 25px;
+	}
+}
+
+.hero__tittle--text {
+	color: var(--accent);
+}
+
+.hero__list {
+	display: flex;
+
+	margin-right: 15px;
+}
+
+.hero__item {
+	&:not(:first-child) {
+		margin-left: 8px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		&:not(:first-child) {
+			margin-left: 15px;
+		}
+	}
+}
+
+.btn-hero {
+	min-height: 24px;
+	width: 62px;
+
+	color: var(--secondaryBgc);
+	background-color: var(--accent);
+	border-radius: 20px;
+
+	@include font(400, 8px, 1.25);
+	@include flex(flex, center, center);
+
+	&:hover,
+	&:focus {
+		background-color: var(--heroBtnDarkHover);
+	}
+
+	@media screen and (min-width: 768px) {
+		min-height: 24px;
+		width: 63px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		@include font(400, 14px, 1.29);
+		min-height: 40px;
+		width: 104px;
+	}
+}
+
+.btn-hero--light {
+	width: 83px;
+
+	color: var(--accent);
+	background-color: var(--heroBtnLight);
+
+	&:hover,
+	&:focus {
+		background-color: var(--heroBtnLightHover);
+	}
+
+	@media screen and (min-width: 1080px) {
+		width: 138px;
+	}
+}
+
+.hero-right {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.text-info-number {
+	font-family: Titan One, sans-serif;
+	font-style: normal;
+	@include font(400, 28px, 1.14);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+
+	color: var(--accent);
+
+	text-align: right;
+	margin-right: 8px;
+
+	@media screen and (min-width: 768px) {
+		@include font(400, 46px, 1.15);
+		margin-right: 18px;
+	}
+}
+
+.text-info {
+	@include font(400, 8px, 1.25);
+	text-align: right;
+	margin-right: 8px;
+	color: var(--secondaryColor);
+
+	&:not(:first-child) {
+		margin-bottom: 14px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		@include font(400, 14px, 1.29);
+		margin-right: 18px;
+
+		&:not(:first-child) {
+			margin-bottom: 18px;
+		}
+	}
+}
+
+.hero__caption {
+	@include font(400, 8px, 1.5);
+	color: var(--secondaryColor);
+
+	width: 114px;
+	margin-left: 120px;
+	margin-bottom: 7px;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1080px) {
+		@include font(400, 14px, 1.4);
+		width: 200px;
+		margin-left: 195px;
+		margin-bottom: 20px;
+	}
+}
+
+.hero__caption--btn {
+	width: 18px;
+	height: 18px;
+	margin-left: 120px;
+	border-color: rgb(71, 24, 24);
+	border-radius: 50%;
+	background-image: url(/images/hero/arrow-right-tablet.jpg);
+	background-size: cover;
+
+	@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background-image: url(/images/hero/arrow-right-tablet@2x.jpg);
+	}
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1080px) {
+		width: 26px;
+		height: 26px;
+		margin-left: 195px;
+		background-image: url(/images/hero/arrow-right-desktop.jpg);
+
+		@media screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(/images/hero/arrow-right-desktop@2x.jpg);
+		}
+	}
+}
+
+.hero-img__girl {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.img-girl {
+	@media screen and (min-width: 768px) {
+		height: 133px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		height: 232px;
+	}
+}
+
+.hero-img__milk {
+	position: absolute;
+	bottom: 28px;
+	left: 15px;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1080px) {
+		bottom: 45px;
+	}
+}
+
+.img-milk {
+	@media screen and (min-width: 768px) {
+		height: 126px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		height: 191px;
+	}
+}
+
+.hero-img__icecream {
+	position: absolute;
+	bottom: 0;
+	left: 102px;
+	z-index: -1;
+
+	@media screen and (min-width: 768px) {
+		left: 359px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		left: 494px;
+	}
+}
+
+.img-icecream {
+	height: 410px;
+
+	@media screen and (min-width: 768px) {
+		height: 336px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		height: 557px;
+	}
+}
+
+.nothing {
+	&::after {
+		content: '';
+		width: 346px;
+		height: 344px;
+		display: block;
+		position: absolute;
+		background-color: var(--circleBgc);
+		border-radius: 50%;
+		z-index: -2;
+	}
+}
