@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Mariia-Petlovana-91.github.io/the-home-of-better-food",
+  "homepage": "https://Mariia-Petlovana-91.github.io/a-home-of-better-food",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /the-home-of-better-food/"
+    "build": "parcel build src/*.html --public-url /a-home-of-better-food/"
   },
   "repository": {
     "type": "git",
