@@ -8,11 +8,6 @@
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /a-home-of-better-food/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
-  },
-  
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
